@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "engine": "file:./engine",
+    "github.com/raysan5/raylib.git": "3.7.0"
+  },
+  "description": "working with c++ and raylib",
+  "name": "game",
+  "targets": {
+    "build": {
+      "include": [
+        "src"
+      ]
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "EnTT",
+  "description": "Gaming meets modern C++",
+  "version": "3.9.0",
+  "homepage": "https://github.com/skypjack/entt",
+  "languages": ["CXX"],
+  "build_type": "Debug",
+  "cxx": {
+    "standard": 17
+  },
+  "options": {
+    "libcpp": ["Use libc++ by adding -stdlib=libc++ flag if availbale", true],
+    "sanitizer": ["Enable sanitizers by adding -fsanitize=address -fno-omit-frame-pointer -fsanitize=undefined flags", false],
+    "fake_option": false,
+
+    "benchmark": ["Build benchmark", false],
+    "example": ["Build examples", false]
+  },
+  "flags": [
+    { "key":"stdlib", "value":"libc++", "if-option":"libcpp" },
+    { "key":"fsanitize", "value":"address", "if-option":"sanitizer" },
+    { "key":"fno-omit-frame-pointer", "if-option":"sanitizer" },
+    { "key":"fsanitize", "value":"undefined", "if-option":"sanitizer" }
+  ],
+  "targets": {
+    "build": {
+      "include": ["src"]
+    },
+    "benchmark": {
+      "include": ["benchmark"]
+    }
+  }
+}

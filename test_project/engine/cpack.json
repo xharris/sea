@@ -1,0 +1,14 @@
+{
+  "name": "engine",
+  "description": "engine built with raylib",
+  "c": {
+    "standard": 17
+  },
+  "cxx": {
+    "standard": 14
+  },
+  "dependencies": {
+    "raylib": "git+https://github.com/raysan5/raylib.git#v3.5.0",
+    "entt": "git+https://github.com/skypjack"
+  }
+}
